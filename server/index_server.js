@@ -38,7 +38,7 @@ app.get('*', (req, res) => {
 mongoose.connect(process.env.MONGODB_URL)
     .then(() => {
         server.listen(port, () =>{
-            console.log(`Connected to PORT ${PORT_NO}`);
+            console.log(`Connected to PORT ${port}`);
         })
     })
     .catch((err) => {
