@@ -14,8 +14,8 @@
     "socket.io": "^4.7.5"
   },
   "scripts": {
-    "server": "nodemon server/index_server",
-    "start": "node server/index_server",
+    "server": "nodemon server/index_server.js",
+    "start": "node server/index_server.js",
     "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
   "devDependencies": {
