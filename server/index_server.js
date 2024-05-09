@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, "/client/dist")));
 //any GET request except requests in paths above will 
 //find index.html (必须写在router之后，否则会覆盖)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '/client/dist/index.html'));
+    res.sendFile(path.join(process.cwd(), 'client', 'dist', 'index.html'));
 });
 
 mongoose.connect(process.env.MONGODB_URL)
