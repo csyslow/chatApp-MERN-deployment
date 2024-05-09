@@ -11,7 +11,7 @@ import path from 'path';
 // const app = express();
 dotenv.config(); //makes .env file usable
 
-const PORT_NO = process.env.PORT || 8000;
+const port = process.env.PORT || 8000;
 const __dirname = path.resolve();
 
 app.use(json()); //parse JSON request payload from req.body
@@ -37,7 +37,7 @@ app.get('*', (req, res) => {
 
 mongoose.connect(process.env.MONGODB_URL)
     .then(() => {
-        server.listen(PORT_NO, () =>{
+        server.listen(port, () =>{
             console.log(`Connected to PORT ${PORT_NO}`);
         })
     })
